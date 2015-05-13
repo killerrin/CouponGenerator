@@ -13,5 +13,11 @@ namespace Coupon_Generator
     /// </summary>
     public partial class App : Application
     {
+        public static CouponSettings CurrentCouponSettings = new CouponSettings();
+
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+        }
     }
 }

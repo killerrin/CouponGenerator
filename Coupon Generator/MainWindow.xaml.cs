@@ -24,5 +24,12 @@ namespace Coupon_Generator
         {
             InitializeComponent();
         }
+
+        void MainFrame_Loaded(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(new Uri("CouponSetupPage.xaml", UriKind.Relative));
+        }
+
+
     }
 }
