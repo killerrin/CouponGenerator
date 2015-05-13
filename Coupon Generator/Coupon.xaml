@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="Coupon_Generator.Coupon"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Width="400" Height="150" BorderThickness="2" BorderBrush="Black" Background="White"
+             d:DesignHeight="150" d:DesignWidth="400"
+             x:Name="couponControl">
+    <Grid>
+        <Image     x:Name="backgroundImage" Width="{Binding Path=ActualWidth, ElementName=couponControl}" Height="{Binding Path=ActualHeight, ElementName=couponControl}" Stretch="Fill" />
+
+        <TextBlock x:Name="headerTextBlock" VerticalAlignment="Top"  HorizontalAlignment="Center" />
+        <TextBlock x:Name="bodyTextBlock" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        
+        <TextBlock x:Name="expiryDateTextBlock" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        <TextBlock x:Name="couponIDTextBlock" VerticalAlignment="Bottom" HorizontalAlignment="Right" />
+    </Grid>
+</UserControl>

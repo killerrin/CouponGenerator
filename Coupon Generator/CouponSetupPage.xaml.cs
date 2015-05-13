@@ -37,6 +37,7 @@ namespace Coupon_Generator
             else couponImage.Source = new BitmapImage();
 
             // Border Defaults
+            borderBackgroundColorPicker.SelectedColor = App.CurrentCouponSettings.BorderColor;
             borderThicknessTextBox.Text = App.CurrentCouponSettings.BorderThickness.ToString();
 
             // Header Defaults
@@ -47,7 +48,7 @@ namespace Coupon_Generator
             headerMarginTextBlockBottom.Text = App.CurrentCouponSettings.HeaderMargin.Bottom.ToString();
             headerCurrentHorizontalAlignment.Text = App.CurrentCouponSettings.HeaderHorizontalAlignment.ToString();
             headerCurrentVerticalAlignment.Text = App.CurrentCouponSettings.HeaderVerticalAlignment.ToString();
-
+            
             if (App.CurrentCouponSettings.HeaderEnabled)
                 headerEnabledRadioButton.IsChecked = true;
             else headerDisabledRadioButton.IsChecked = true;
@@ -137,6 +138,11 @@ namespace Coupon_Generator
         #endregion
 
         #region Border Tab
+        private void borderBackgroundColorPicker_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color> e)
+        {
+            App.CurrentCouponSettings.BorderColor = e.NewValue;
+            UpdatePreviewImage();
+        }
         private void borderThickness_KeyUp(object sender, KeyEventArgs e)
         {
             if (!Int32.TryParse(borderThicknessTextBox.Text, out App.CurrentCouponSettings.BorderThickness))
@@ -621,55 +627,8 @@ namespace Coupon_Generator
         #region Preview
         public void UpdatePreviewImage()
         {
-            previewBackgroundColor.Fill = new SolidColorBrush(App.CurrentCouponSettings.BackgroundColor);
-
-            // Background Image
-            if (App.CurrentCouponSettings.ImageLocation != null)
-                previewImage.Source = new BitmapImage(App.CurrentCouponSettings.ImageLocation);
-            else previewImage.Source = new BitmapImage();
-
-            // Border
-            previewBorderRectangle.StrokeThickness = App.CurrentCouponSettings.BorderThickness;
-
-            // Header
-            if (App.CurrentCouponSettings.HeaderEnabled)
-            {
-                previewHeaderTextBlock.Text = App.CurrentCouponSettings.HeaderText;
-                previewHeaderTextBlock.Margin = App.CurrentCouponSettings.HeaderMargin;
-                previewHeaderTextBlock.HorizontalAlignment = App.CurrentCouponSettings.HeaderHorizontalAlignment;
-                previewHeaderTextBlock.VerticalAlignment = App.CurrentCouponSettings.HeaderVerticalAlignment;
-            }
-            else previewHeaderTextBlock.Text = "";
-
-            // Body
-            if (App.CurrentCouponSettings.BodyEnabled)
-            {
-                previewBodyTextBlock.Text = App.CurrentCouponSettings.BodyText;
-                previewBodyTextBlock.Margin = App.CurrentCouponSettings.BodyMargin;
-                previewBodyTextBlock.HorizontalAlignment = App.CurrentCouponSettings.BodyHorizontalAlignment;
-                previewBodyTextBlock.VerticalAlignment = App.CurrentCouponSettings.BodyVerticalAlignment;
-            }
-            else previewBodyTextBlock.Text = "";
-
-            // Expiry Date
-            if (App.CurrentCouponSettings.ExpiryDateEnabled) 
-            {
-                previewExpiryDateTextBlock.Text = App.CurrentCouponSettings.ExpiryDate.ToLongDateString();
-                previewExpiryDateTextBlock.Margin = App.CurrentCouponSettings.ExpiryDateMargin;
-                previewExpiryDateTextBlock.HorizontalAlignment = App.CurrentCouponSettings.ExpiryDateHorizontalAlignment;
-                previewExpiryDateTextBlock.VerticalAlignment = App.CurrentCouponSettings.ExpiryDateVerticalAlignment;
-            }
-            else previewExpiryDateTextBlock.Text = "";
-
-            // Coupon ID
-            if (App.CurrentCouponSettings.CouponIDEnabled)
-            {
-                previewCouponNumberTextBlock.Text = App.CurrentCouponSettings.CouponIDStartIndex.ToString();
-                previewCouponNumberTextBlock.Margin = App.CurrentCouponSettings.CouponIDMargin;
-                previewCouponNumberTextBlock.HorizontalAlignment = App.CurrentCouponSettings.CouponIDHorizontalAlignment;
-                previewCouponNumberTextBlock.VerticalAlignment = App.CurrentCouponSettings.CouponIDVerticalAlignment;
-            }
-            else previewCouponNumberTextBlock.Text = "";
+            previewCoupon.CouponSettings = App.CurrentCouponSettings;
+            previewCoupon.CouponID = App.CurrentCouponSettings.CouponIDStartIndex;
         }
         #endregion
     }

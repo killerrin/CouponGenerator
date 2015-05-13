@@ -30,3 +30,9 @@ C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Debug\ro\X
 C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Debug\Coupon.baml
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Debug\CouponGenerationPage2x4.baml
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Debug\Coupon.g.cs
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Debug\CouponGenerationPage2x4.g.cs
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Debug\Coupon Generator_MarkupCompile.lref

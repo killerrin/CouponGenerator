@@ -20,8 +20,11 @@ namespace Coupon_Generator
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static MainWindow Current;
+
         public MainWindow()
         {
+            Current = this;
             InitializeComponent();
         }
 

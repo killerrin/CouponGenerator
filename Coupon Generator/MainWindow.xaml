@@ -1,7 +1,7 @@
 ﻿<Window x:Class="Coupon_Generator.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Coupon Generator" Height="600" Width="800">
+        Title="Coupon Generator" Height="600" Width="800" ResizeMode="NoResize">
     <Grid>
         <Frame x:Name="mainFrame" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0"
                Loaded="MainFrame_Loaded"/>

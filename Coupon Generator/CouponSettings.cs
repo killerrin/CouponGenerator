@@ -11,9 +11,10 @@ namespace Coupon_Generator
     public class CouponSettings
     {
         public Color BackgroundColor;
-        public int BorderThickness;
-
         public Uri ImageLocation;
+
+        public Color BorderColor;
+        public int BorderThickness;
 
         public bool HeaderEnabled;
         public string HeaderText;
@@ -34,17 +35,20 @@ namespace Coupon_Generator
         public VerticalAlignment ExpiryDateVerticalAlignment;
 
         public bool CouponIDEnabled;
-        public int CouponIDStartIndex;
         public Thickness CouponIDMargin;
         public HorizontalAlignment CouponIDHorizontalAlignment;
         public VerticalAlignment CouponIDVerticalAlignment;
+        
+        public int CouponIDStartIndex;
+        public int NumberOfCouponsToPrint;
 
         public CouponSettings()
         {
             BackgroundColor = Color.FromArgb(255, 197, 228, 255);
-            BorderThickness = 2;
-
             ImageLocation = null;
+
+            BorderColor = Color.FromArgb(255, 0, 0, 0);
+            BorderThickness = 2;
 
             HeaderEnabled = true;
             HeaderText = "";
@@ -69,6 +73,8 @@ namespace Coupon_Generator
             CouponIDMargin = new Thickness(0, 0, 40, 10);
             CouponIDHorizontalAlignment = HorizontalAlignment.Right;
             CouponIDVerticalAlignment = VerticalAlignment.Bottom;
+
+            NumberOfCouponsToPrint = 1;
         }
     }
 }
