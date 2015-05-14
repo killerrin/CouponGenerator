@@ -79,8 +79,8 @@ namespace Coupon_Generator
             CouponIDHorizontalAlignment = HorizontalAlignment.Right;
             CouponIDVerticalAlignment = VerticalAlignment.Bottom;
 
-            NumberOfCouponsToGenerate = 1;
-            SaveAsSettings = Coupon_Generator.SaveAsSettings.PDF;
+            NumberOfCouponsToGenerate = 8;
+            SaveAsSettings = Coupon_Generator.SaveAsSettings.Any;
         }
     }
 }

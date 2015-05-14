@@ -679,10 +679,10 @@ namespace Coupon_Generator
             if (App.CurrentCouponSettings.NumberOfCouponsToGenerate <= 0) return;
             
             // Navigate to the Page
-            if (generate1x3RadioButton.IsChecked.Value)
-                MainWindow.Current.mainFrame.Navigate(new Uri("CouponGenerationPage2x4.xaml", UriKind.Relative));
             if (generate2x4RadioButton.IsChecked.Value)
                 MainWindow.Current.mainFrame.Navigate(new Uri("CouponGenerationPage2x4.xaml", UriKind.Relative));
+            if (generate1x3RadioButton.IsChecked.Value)
+                MainWindow.Current.mainFrame.Navigate(new Uri("CouponGenerationPage1x3.xaml", UriKind.Relative));
         }
         #endregion
         #endregion

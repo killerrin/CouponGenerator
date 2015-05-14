@@ -8,6 +8,7 @@ namespace Coupon_Generator
 {
     public enum SaveAsSettings
     {
+        Any,
         SeriesOfImages,
         PDF
     }
