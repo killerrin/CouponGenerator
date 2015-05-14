@@ -6,12 +6,26 @@
 	  mc:Ignorable="d" 
       xmlns:couponControl="clr-namespace:Coupon_Generator"
 	  d:DesignHeight="600" d:DesignWidth="800"
-	Title="Generating 2x4..."
-	Background="White">
+	  Title="Generating 2x4..."
+	  Background="White" 
+      ShowsNavigationUI="False">
 
 	<Grid>
-		<Canvas x:Name="couponCanvas" Width="800">
-            <Grid>
+		<Canvas x:Name="couponCanvas" Width="800" Height="600">
+            <couponControl:Coupon x:Name="coupon11" Margin="0,0,0,0"/>
+            <couponControl:Coupon x:Name="coupon12" Margin="400,0,0,0"/>
+
+            <couponControl:Coupon x:Name="coupon21" Margin="0,150,0,0"/>
+            <couponControl:Coupon x:Name="coupon22" Margin="400,150,0,0"/>
+
+            <couponControl:Coupon x:Name="coupon31" Margin="0,300,0,0"/>
+            <couponControl:Coupon x:Name="coupon32" Margin="400,300,0,0"/>
+
+            <couponControl:Coupon x:Name="coupon41" Margin="0,450,0,0"/>
+            <couponControl:Coupon x:Name="coupon42" Margin="400,450,0,0"/>
+
+            <!--
+            <Grid x:Name="couponGrid">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
@@ -22,7 +36,7 @@
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                
+            
                 <couponControl:Coupon x:Name="coupon11" Grid.Column="0" Grid.Row="0"/>
                 <couponControl:Coupon x:Name="coupon12" Grid.Column="1" Grid.Row="0"/>
 
@@ -34,7 +48,8 @@
 
                 <couponControl:Coupon x:Name="coupon41" Grid.Column="0" Grid.Row="3"/>
                 <couponControl:Coupon x:Name="coupon42" Grid.Column="1" Grid.Row="3"/>
-            </Grid>
+            </Grid> -->
 		</Canvas>
+        <Image x:Name="previewImage"  Width="400" Height="150"/>
 	</Grid>
 </Page>

@@ -39,7 +39,18 @@ namespace Coupon_Generator
             set
             {
                 m_couponID = value;
-                UpdateCoupon();
+
+                if (m_couponSettings != null)
+                {
+                    if (m_couponSettings.CouponIDEnabled)
+                    {
+                        couponIDTextBlock.Text = m_couponID.ToString();
+                        couponIDTextBlock.Margin = m_couponSettings.CouponIDMargin;
+                        couponIDTextBlock.HorizontalAlignment = m_couponSettings.CouponIDHorizontalAlignment;
+                        couponIDTextBlock.VerticalAlignment = m_couponSettings.CouponIDVerticalAlignment;
+                    }
+                    else couponIDTextBlock.Text = "";
+                }
             }
         }
         #endregion
@@ -52,14 +63,16 @@ namespace Coupon_Generator
 
         void Coupon_Loaded(object sender, RoutedEventArgs e)
         {
-            m_couponSettings = new CouponSettings();
-            m_couponID = 1;
+            //m_couponSettings = new CouponSettings();
+            //m_couponID = 1;
 
             UpdateCoupon();
         }
 
         public void UpdateCoupon()
         {
+            if (m_couponSettings == null) return;
+
             // Background
             Background = new SolidColorBrush(m_couponSettings.BackgroundColor);
 
@@ -94,22 +107,28 @@ namespace Coupon_Generator
             // Expiry Date
             if (m_couponSettings.ExpiryDateEnabled)
             {
-                expiryDateTextBlock.Text = m_couponSettings.ExpiryDate.ToLongDateString();
+                string dateText = "";
+                if (string.IsNullOrEmpty(m_couponSettings.ExpiryText) ||
+                    string.IsNullOrWhiteSpace(m_couponSettings.ExpiryText))
+                    dateText = m_couponSettings.ExpiryDate.ToLongDateString();
+                else
+                    dateText = m_couponSettings.ExpiryText + " " + m_couponSettings.ExpiryDate.ToLongDateString();
+
+                switch (m_couponSettings.ExpiryDateCase)
+                {
+                    case ExpiryDateCase.AllUpper: expiryDateTextBlock.Text = dateText.ToUpper();    break;
+                    case ExpiryDateCase.AllLower: expiryDateTextBlock.Text = dateText.ToLower();    break;
+                    case ExpiryDateCase.Default:
+                    default:
+                        expiryDateTextBlock.Text = dateText;
+                        break;
+                }
+
                 expiryDateTextBlock.Margin = m_couponSettings.ExpiryDateMargin;
                 expiryDateTextBlock.HorizontalAlignment = m_couponSettings.ExpiryDateHorizontalAlignment;
                 expiryDateTextBlock.VerticalAlignment = m_couponSettings.ExpiryDateVerticalAlignment;
             }
             else expiryDateTextBlock.Text = "";
-
-            // Coupon ID
-            if (m_couponSettings.CouponIDEnabled)
-            {
-                couponIDTextBlock.Text = m_couponID.ToString();
-                couponIDTextBlock.Margin = m_couponSettings.CouponIDMargin;
-                couponIDTextBlock.HorizontalAlignment = m_couponSettings.CouponIDHorizontalAlignment;
-                couponIDTextBlock.VerticalAlignment = m_couponSettings.CouponIDVerticalAlignment;
-            }
-            else couponIDTextBlock.Text = "";
         }
     }
 }

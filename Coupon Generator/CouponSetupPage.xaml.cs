@@ -92,6 +92,8 @@ namespace Coupon_Generator
                 couponIDEnabledRadioButton.IsChecked = true;
             else couponIDDisabledRadioButton.IsChecked = true;
 
+            generateNumberOfCouponsToGenerateTextBlock.Text = App.CurrentCouponSettings.NumberOfCouponsToGenerate.ToString();
+
             // Update the Preview
             UpdatePreviewImage();
         }
@@ -390,6 +392,14 @@ namespace Coupon_Generator
         #endregion
 
         #region Expiry Date Tab
+        private void expiryTextBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (string.IsNullOrEmpty(expiryTextBox.Text))
+                App.CurrentCouponSettings.ExpiryText = "";
+            else
+                App.CurrentCouponSettings.ExpiryText = expiryTextBox.Text;
+            UpdatePreviewImage();
+        }
         private void expiryDate_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
             if (!expiryDatePicker.SelectedDate.HasValue) return;
@@ -404,6 +414,22 @@ namespace Coupon_Generator
         private void expiryDateDisabledRadioButton_Click(object sender, RoutedEventArgs e)
         {
             App.CurrentCouponSettings.ExpiryDateEnabled = false;
+            UpdatePreviewImage();
+        }
+
+        private void expiryDateDefaultRadioButton_Click(object sender, RoutedEventArgs e)
+        {
+            App.CurrentCouponSettings.ExpiryDateCase = ExpiryDateCase.Default;
+            UpdatePreviewImage();
+        }
+        private void expiryDateAllUpperRadioButton_Click(object sender, RoutedEventArgs e)
+        {
+            App.CurrentCouponSettings.ExpiryDateCase = ExpiryDateCase.AllUpper;
+            UpdatePreviewImage();
+        }
+        private void expiryDateAllLowerRadioButton_Click(object sender, RoutedEventArgs e)
+        {
+            App.CurrentCouponSettings.ExpiryDateCase = ExpiryDateCase.AllLower;
             UpdatePreviewImage();
         }
 
@@ -622,6 +648,43 @@ namespace Coupon_Generator
         }
         #endregion
         #endregion
+
+        #region Generate Tab
+        private void generateNumberOfCouponsToGenerateTextBlock_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (!Int32.TryParse(generateNumberOfCouponsToGenerateTextBlock.Text, out App.CurrentCouponSettings.NumberOfCouponsToGenerate))
+            {
+                App.CurrentCouponSettings.NumberOfCouponsToGenerate = 1;
+            }
+
+            UpdatePreviewImage();
+        }
+
+        private void generateSize2x4RadioButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void generateSize1x3RadioButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void generateButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!generate1x3RadioButton.IsChecked.HasValue ||
+                !generate2x4RadioButton.IsChecked.HasValue)
+                return;
+
+            if (App.CurrentCouponSettings.NumberOfCouponsToGenerate <= 0) return;
+            
+            // Navigate to the Page
+            if (generate1x3RadioButton.IsChecked.Value)
+                MainWindow.Current.mainFrame.Navigate(new Uri("CouponGenerationPage2x4.xaml", UriKind.Relative));
+            if (generate2x4RadioButton.IsChecked.Value)
+                MainWindow.Current.mainFrame.Navigate(new Uri("CouponGenerationPage2x4.xaml", UriKind.Relative));
+        }
+        #endregion
         #endregion
 
         #region Preview
@@ -629,6 +692,7 @@ namespace Coupon_Generator
         {
             previewCoupon.CouponSettings = App.CurrentCouponSettings;
             previewCoupon.CouponID = App.CurrentCouponSettings.CouponIDStartIndex;
+            previewCoupon.UpdateCoupon();
         }
         #endregion
     }

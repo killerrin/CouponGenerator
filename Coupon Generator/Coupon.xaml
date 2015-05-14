@@ -8,7 +8,7 @@
              d:DesignHeight="150" d:DesignWidth="400"
              x:Name="couponControl">
     <Grid>
-        <Image     x:Name="backgroundImage" Width="{Binding Path=ActualWidth, ElementName=couponControl}" Height="{Binding Path=ActualHeight, ElementName=couponControl}" Stretch="Fill" />
+        <Image     x:Name="backgroundImage"  Width="{Binding Path=ActualWidth, ElementName=couponControl}" Height="{Binding Path=ActualHeight, ElementName=couponControl}" Stretch="Fill" />
 
         <TextBlock x:Name="headerTextBlock" VerticalAlignment="Top"  HorizontalAlignment="Center" />
         <TextBlock x:Name="bodyTextBlock" VerticalAlignment="Center" HorizontalAlignment="Center"/>

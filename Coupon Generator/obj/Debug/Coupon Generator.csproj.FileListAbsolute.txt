@@ -36,3 +36,9 @@ C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Debug\Coup
 C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Debug\CouponGenerationPage2x4.g.cs
 C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Debug\Coupon Generator_MarkupCompile.lref
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Debug\PdfSharp.Charting.dll
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Debug\PdfSharp.dll
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Debug\PdfSharp.xml
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Debug\PdfSharp.Charting.xml
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Debug\de\PdfSharp.Charting.resources.dll

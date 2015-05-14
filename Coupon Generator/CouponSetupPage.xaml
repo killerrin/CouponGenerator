@@ -14,7 +14,6 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -209,151 +208,215 @@
                         </Grid>
                     </TabItem>
                 <TabItem Header="Expiry Date">
-                        <Grid>
-                            <StackPanel Orientation="Vertical">
-                                <StackPanel Orientation="Horizontal">
-                                    <RadioButton x:Name="expiryDateEnabledRadioButton"  Margin="0,0,0,0"   GroupName="ExpiryDateEnable" Click="expiryDateEnabledRadioButton_Click" IsChecked="True">Enabled</RadioButton>
-                                    <RadioButton x:Name="expiryDateDisabledRadioButton" Margin="20,0,0,0"  GroupName="ExpiryDateEnable" Click="expiryDateDisabledRadioButton_Click">Disabled</RadioButton>
-                                </StackPanel>
+                    <Grid>
+                        <StackPanel Orientation="Vertical">
+                            <StackPanel Orientation="Horizontal">
+                                <RadioButton x:Name="expiryDateEnabledRadioButton"  Margin="0,0,0,0"   GroupName="ExpiryDateEnable" Click="expiryDateEnabledRadioButton_Click" IsChecked="True">Enabled</RadioButton>
+                                <RadioButton x:Name="expiryDateDisabledRadioButton" Margin="20,0,0,0"  GroupName="ExpiryDateEnable" Click="expiryDateDisabledRadioButton_Click">Disabled</RadioButton>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <RadioButton x:Name="expiryDateDefaultRadioButton"      Margin="0,0,0,0"    GroupName="ExpiryDateDisplay" Click="expiryDateDefaultRadioButton_Click" IsChecked="True">Default</RadioButton>
+                                <RadioButton x:Name="expiryDateAllUpperCaseRadioButton" Margin="24,0,0,0"   GroupName="ExpiryDateDisplay" Click="expiryDateAllUpperRadioButton_Click">Display as Uppercase</RadioButton>
+                                <RadioButton x:Name="expiryDateAllLowerCaseRadioButton" Margin="20,0,0,0"   GroupName="ExpiryDateDisplay" Click="expiryDateAllLowerRadioButton_Click">Display as Lowercase</RadioButton>
+                            </StackPanel>
 
-                                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
-                                    <TextBlock Text="Expirary Date"/>
-                                    <DatePicker x:Name="expiryDatePicker" SelectedDateFormat="Long" Width="250" Margin="20,0,0,0" 
-                                            SelectedDateChanged="expiryDate_SelectedDateChanged"/>
-                                </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                                <TextBlock Text="Expiry Text"/>
+                                <TextBox x:Name="expiryTextBox" Width="200" Margin="34,0,0,0"
+                                             KeyUp="expiryTextBox_KeyUp"/>
+                            </StackPanel>
 
-                                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
-                                    <StackPanel Orientation="Vertical">
-                                        <TextBlock Text="Margin" />
-                                        <DockPanel Width="150" HorizontalAlignment="Left" Margin="0,0,0,0">
-                                            <StackPanel Orientation="Vertical" DockPanel.Dock="Top">
-                                                <TextBlock Text="Top"  HorizontalAlignment="Center"/>
-                                                <TextBox x:Name="expiryDateMarginTextBlockTop" HorizontalAlignment="Center" Width="50"
+                            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                                <TextBlock Text="Expirary Date"/>
+                                <DatePicker x:Name="expiryDatePicker" SelectedDateFormat="Long" Width="250" Margin="20,0,0,0" 
+                                                SelectedDateChanged="expiryDate_SelectedDateChanged"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="Margin" />
+                                    <DockPanel Width="150" HorizontalAlignment="Left" Margin="0,0,0,0">
+                                        <StackPanel Orientation="Vertical" DockPanel.Dock="Top">
+                                            <TextBlock Text="Top"  HorizontalAlignment="Center"/>
+                                            <TextBox x:Name="expiryDateMarginTextBlockTop" HorizontalAlignment="Center" Width="50"
                                                      PreviewTextInput="textBox_NumberValidation"
                                                      KeyUp="expiryDateMarginTop_KeyUp"/>
-                                            </StackPanel>
-                                            <StackPanel Orientation="Vertical" DockPanel.Dock="Bottom">
-                                                <TextBlock Text="Bottom" HorizontalAlignment="Center" />
-                                                <TextBox x:Name="expiryDateMarginTextBlockBottom" HorizontalAlignment="Center" Width="50"
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical" DockPanel.Dock="Bottom">
+                                            <TextBlock Text="Bottom" HorizontalAlignment="Center" />
+                                            <TextBox x:Name="expiryDateMarginTextBlockBottom" HorizontalAlignment="Center" Width="50"
                                                      PreviewTextInput="textBox_NumberValidation"
                                                      KeyUp="expiryDateMarginBottom_KeyUp"/>
-                                            </StackPanel>
-                                            <StackPanel Orientation="Vertical" DockPanel.Dock="Left">
-                                                <TextBlock Text="Left" HorizontalAlignment="Center" />
-                                                <TextBox x:Name="expiryDateMarginTextBlockLeft" HorizontalAlignment="Center" Width="50"
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical" DockPanel.Dock="Left">
+                                            <TextBlock Text="Left" HorizontalAlignment="Center" />
+                                            <TextBox x:Name="expiryDateMarginTextBlockLeft" HorizontalAlignment="Center" Width="50"
                                                      PreviewTextInput="textBox_NumberValidation"
                                                      KeyUp="expiryDateMarginLeft_KeyUp"/>
-                                            </StackPanel>
-                                            <StackPanel Orientation="Vertical" DockPanel.Dock="Right">
-                                                <TextBlock Text="Right" HorizontalAlignment="Center"/>
-                                                <TextBox x:Name="expiryDateMarginTextBlockRight" HorizontalAlignment="Center" Width="50"
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical" DockPanel.Dock="Right">
+                                            <TextBlock Text="Right" HorizontalAlignment="Center"/>
+                                            <TextBox x:Name="expiryDateMarginTextBlockRight" HorizontalAlignment="Center" Width="50"
                                                      PreviewTextInput="textBox_NumberValidation"
                                                      KeyUp="expiryDateMarginRight_KeyUp"/>
-                                            </StackPanel>
-                                            <TextBlock Text="" />
-                                        </DockPanel>
-                                    </StackPanel>
+                                        </StackPanel>
+                                        <TextBlock Text="" />
+                                    </DockPanel>
+                                </StackPanel>
 
-                                    <StackPanel Orientation="Vertical" Margin="20,0,0,0">
-                                        <TextBlock Text="Horizontal Alignment" />
-                                        <TextBlock x:Name="expiryDateCurrentHorizontalAlignment" Text="Center" HorizontalAlignment="Center" />
+                                <StackPanel Orientation="Vertical" Margin="20,0,0,0">
+                                    <TextBlock Text="Horizontal Alignment" />
+                                    <TextBlock x:Name="expiryDateCurrentHorizontalAlignment" Text="Center" HorizontalAlignment="Center" />
 
-                                        <DockPanel>
-                                            <Button Content="Stretch" DockPanel.Dock="Bottom"   Click="expiryDateHorizontalAlignmentStretch_Click"/>
-                                            <Button Content="Left" DockPanel.Dock="Left"        Click="expiryDateHorizontalAlignmentLeft_Click"/>
-                                            <Button Content="Right" DockPanel.Dock="Right"      Click="expiryDateHorizontalAlignmentRight_Click"/>
-                                            <Button Content="Center"                            Click="expiryDateHorizontalAlignmentCenter_Click" />
-                                        </DockPanel>
-                                    </StackPanel>
+                                    <DockPanel>
+                                        <Button Content="Stretch" DockPanel.Dock="Bottom"   Click="expiryDateHorizontalAlignmentStretch_Click"/>
+                                        <Button Content="Left" DockPanel.Dock="Left"        Click="expiryDateHorizontalAlignmentLeft_Click"/>
+                                        <Button Content="Right" DockPanel.Dock="Right"      Click="expiryDateHorizontalAlignmentRight_Click"/>
+                                        <Button Content="Center"                            Click="expiryDateHorizontalAlignmentCenter_Click" />
+                                    </DockPanel>
+                                </StackPanel>
 
-                                    <StackPanel Orientation="Vertical" Margin="20,0,0,0">
-                                        <TextBlock Text="Vertical Alignment" />
-                                        <TextBlock x:Name="expiryDateCurrentVerticalAlignment" Text="Bottom" HorizontalAlignment="Center" />
+                                <StackPanel Orientation="Vertical" Margin="20,0,0,0">
+                                    <TextBlock Text="Vertical Alignment" />
+                                    <TextBlock x:Name="expiryDateCurrentVerticalAlignment" Text="Bottom" HorizontalAlignment="Center" />
 
-                                        <DockPanel>
-                                            <Button Content="Stretch" DockPanel.Dock="Right"    Click="expiryDateVerticalAlignmentStretch_Click"/>
-                                            <Button Content="Top" DockPanel.Dock="Top"          Click="expiryDateVerticalAlignmentTop_Click"/>
-                                            <Button Content="Bottom" DockPanel.Dock="Bottom"    Click="expiryDateVerticalAlignmentBottom_Click"/>
-                                            <Button Content="Center"                            Click="expiryDateVerticalAlignmentCenter_Click" />
-                                        </DockPanel>
-                                    </StackPanel>
+                                    <DockPanel>
+                                        <Button Content="Stretch" DockPanel.Dock="Right"    Click="expiryDateVerticalAlignmentStretch_Click"/>
+                                        <Button Content="Top" DockPanel.Dock="Top"          Click="expiryDateVerticalAlignmentTop_Click"/>
+                                        <Button Content="Bottom" DockPanel.Dock="Bottom"    Click="expiryDateVerticalAlignmentBottom_Click"/>
+                                        <Button Content="Center"                            Click="expiryDateVerticalAlignmentCenter_Click" />
+                                    </DockPanel>
                                 </StackPanel>
                             </StackPanel>
-                        </Grid>
-                    </TabItem>
+                        </StackPanel>
+                    </Grid>
+                </TabItem>
                 <TabItem Header="Coupon ID">
-                        <Grid>
-                            <StackPanel Orientation="Vertical">
-                                <StackPanel Orientation="Horizontal">
-                                    <RadioButton x:Name="couponIDEnabledRadioButton"  Margin="0,0,0,0"   GroupName="CouponIDEnable" Click="couponIDEnabledRadioButton_Click" IsChecked="True">Enabled</RadioButton>
-                                    <RadioButton x:Name="couponIDDisabledRadioButton" Margin="20,0,0,0"  GroupName="CouponIDEnable" Click="couponIDDisabledRadioButton_Click">Disabled</RadioButton>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
-                                    <TextBlock Text="Coupon ID Starting Number"/>
-                                    <TextBox x:Name="couponIDStartingNumberTextBlock" Text="1" Width="100" Margin="20,0,0,0" 
+                    <Grid>
+                        <StackPanel Orientation="Vertical">
+                            <StackPanel Orientation="Horizontal">
+                                <RadioButton x:Name="couponIDEnabledRadioButton"  Margin="0,0,0,0"   GroupName="CouponIDEnable" Click="couponIDEnabledRadioButton_Click" IsChecked="True">Enabled</RadioButton>
+                                <RadioButton x:Name="couponIDDisabledRadioButton" Margin="20,0,0,0"  GroupName="CouponIDEnable" Click="couponIDDisabledRadioButton_Click">Disabled</RadioButton>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                                <TextBlock Text="Coupon ID Starting Number"/>
+                                <TextBox x:Name="couponIDStartingNumberTextBlock" Text="1" Width="100" Margin="20,0,0,0" 
                                          PreviewTextInput="textBox_NumberValidation"
                                          KeyUp="couponIDStartingNumberTextBlock_KeyUp"/>
-                                </StackPanel>
+                            </StackPanel>
 
-                                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
-                                    <StackPanel Orientation="Vertical">
-                                        <TextBlock Text="Margin" />
-                                        <DockPanel Width="150" HorizontalAlignment="Left" Margin="0,0,0,0">
-                                            <StackPanel Orientation="Vertical" DockPanel.Dock="Top">
-                                                <TextBlock Text="Top"  HorizontalAlignment="Center"/>
-                                                <TextBox x:Name="couponIDMarginTextBlockTop" HorizontalAlignment="Center" Width="50"
+                            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="Margin" />
+                                    <DockPanel Width="150" HorizontalAlignment="Left" Margin="0,0,0,0">
+                                        <StackPanel Orientation="Vertical" DockPanel.Dock="Top">
+                                            <TextBlock Text="Top"  HorizontalAlignment="Center"/>
+                                            <TextBox x:Name="couponIDMarginTextBlockTop" HorizontalAlignment="Center" Width="50"
                                                      PreviewTextInput="textBox_NumberValidation"
                                                      KeyUp="couponIDMarginTop_KeyUp"/>
-                                            </StackPanel>
-                                            <StackPanel Orientation="Vertical" DockPanel.Dock="Bottom">
-                                                <TextBlock Text="Bottom" HorizontalAlignment="Center" />
-                                                <TextBox x:Name="couponIDMarginTextBlockBottom" HorizontalAlignment="Center" Width="50"
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical" DockPanel.Dock="Bottom">
+                                            <TextBlock Text="Bottom" HorizontalAlignment="Center" />
+                                            <TextBox x:Name="couponIDMarginTextBlockBottom" HorizontalAlignment="Center" Width="50"
                                                      PreviewTextInput="textBox_NumberValidation"
                                                      KeyUp="couponIDMarginBottom_KeyUp"/>
-                                            </StackPanel>
-                                            <StackPanel Orientation="Vertical" DockPanel.Dock="Left">
-                                                <TextBlock Text="Left" HorizontalAlignment="Center" />
-                                                <TextBox x:Name="couponIDMarginTextBlockLeft" HorizontalAlignment="Center" Width="50"
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical" DockPanel.Dock="Left">
+                                            <TextBlock Text="Left" HorizontalAlignment="Center" />
+                                            <TextBox x:Name="couponIDMarginTextBlockLeft" HorizontalAlignment="Center" Width="50"
                                                      PreviewTextInput="textBox_NumberValidation"
                                                      KeyUp="couponIDMarginLeft_KeyUp"/>
-                                            </StackPanel>
-                                            <StackPanel Orientation="Vertical" DockPanel.Dock="Right">
-                                                <TextBlock Text="Right" HorizontalAlignment="Center"/>
-                                                <TextBox x:Name="couponIDMarginTextBlockRight" HorizontalAlignment="Center" Width="50"
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical" DockPanel.Dock="Right">
+                                            <TextBlock Text="Right" HorizontalAlignment="Center"/>
+                                            <TextBox x:Name="couponIDMarginTextBlockRight" HorizontalAlignment="Center" Width="50"
                                                      PreviewTextInput="textBox_NumberValidation"
                                                      KeyUp="couponIDMarginRight_KeyUp"/>
-                                            </StackPanel>
-                                            <TextBlock Text="" />
-                                        </DockPanel>
-                                    </StackPanel>
+                                        </StackPanel>
+                                        <TextBlock Text="" />
+                                    </DockPanel>
+                                </StackPanel>
 
-                                    <StackPanel Orientation="Vertical" Margin="20,0,0,0">
-                                        <TextBlock Text="Horizontal Alignment" />
-                                        <TextBlock x:Name="couponIDCurrentHorizontalAlignment" Text="Center" HorizontalAlignment="Center" />
+                                <StackPanel Orientation="Vertical" Margin="20,0,0,0">
+                                    <TextBlock Text="Horizontal Alignment" />
+                                    <TextBlock x:Name="couponIDCurrentHorizontalAlignment" Text="Center" HorizontalAlignment="Center" />
 
-                                        <DockPanel>
-                                            <Button Content="Stretch" DockPanel.Dock="Bottom"   Click="couponIDHorizontalAlignmentStretch_Click"/>
-                                            <Button Content="Left" DockPanel.Dock="Left"        Click="couponIDHorizontalAlignmentLeft_Click"/>
-                                            <Button Content="Right" DockPanel.Dock="Right"      Click="couponIDHorizontalAlignmentRight_Click"/>
-                                            <Button Content="Center"                            Click="couponIDHorizontalAlignmentCenter_Click" />
-                                        </DockPanel>
-                                    </StackPanel>
+                                    <DockPanel>
+                                        <Button Content="Stretch" DockPanel.Dock="Bottom"   Click="couponIDHorizontalAlignmentStretch_Click"/>
+                                        <Button Content="Left" DockPanel.Dock="Left"        Click="couponIDHorizontalAlignmentLeft_Click"/>
+                                        <Button Content="Right" DockPanel.Dock="Right"      Click="couponIDHorizontalAlignmentRight_Click"/>
+                                        <Button Content="Center"                            Click="couponIDHorizontalAlignmentCenter_Click" />
+                                    </DockPanel>
+                                </StackPanel>
 
-                                    <StackPanel Orientation="Vertical" Margin="20,0,0,0">
-                                        <TextBlock Text="Vertical Alignment" />
-                                        <TextBlock x:Name="couponIDCurrentVerticalAlignment" Text="Bottom" HorizontalAlignment="Center" />
+                                <StackPanel Orientation="Vertical" Margin="20,0,0,0">
+                                    <TextBlock Text="Vertical Alignment" />
+                                    <TextBlock x:Name="couponIDCurrentVerticalAlignment" Text="Bottom" HorizontalAlignment="Center" />
 
-                                        <DockPanel>
-                                            <Button Content="Stretch" DockPanel.Dock="Right"    Click="couponIDVerticalAlignmentStretch_Click"/>
-                                            <Button Content="Top" DockPanel.Dock="Top"          Click="couponIDVerticalAlignmentTop_Click"/>
-                                            <Button Content="Bottom" DockPanel.Dock="Bottom"    Click="couponIDVerticalAlignmentBottom_Click"/>
-                                            <Button Content="Center"                            Click="couponIDVerticalAlignmentCenter_Click" />
-                                        </DockPanel>
-                                    </StackPanel>
+                                    <DockPanel>
+                                        <Button Content="Stretch" DockPanel.Dock="Right"    Click="couponIDVerticalAlignmentStretch_Click"/>
+                                        <Button Content="Top" DockPanel.Dock="Top"          Click="couponIDVerticalAlignmentTop_Click"/>
+                                        <Button Content="Bottom" DockPanel.Dock="Bottom"    Click="couponIDVerticalAlignmentBottom_Click"/>
+                                        <Button Content="Center"                            Click="couponIDVerticalAlignmentCenter_Click" />
+                                    </DockPanel>
                                 </StackPanel>
                             </StackPanel>
-                        </Grid>
-                    </TabItem>
+                        </StackPanel>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Generate">
+                    <Grid>
+                        <StackPanel Orientation="Vertical">
+                            <StackPanel Orientation="Horizontal" Margin="0,00,0,0">
+                                <TextBlock Text="Number of Coupons to Generate"/>
+                                <TextBox x:Name="generateNumberOfCouponsToGenerateTextBlock" Text="1" Width="100" Margin="20,0,0,0" 
+                                         PreviewTextInput="textBox_NumberValidation"
+                                         KeyUp="generateNumberOfCouponsToGenerateTextBlock_KeyUp"/>
+                            </StackPanel>
+                            
+                            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                                <RadioButton x:Name="generate2x4RadioButton"  Margin="0,0,0,0"   GroupName="GenerateSize"  Click="generateSize2x4RadioButton_Click" IsChecked="True">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Rectangle Stroke="Black" StrokeThickness="2" Width="50" Height="25" Grid.Column="0" Grid.Row="0"/>
+                                        <Rectangle Stroke="Black" StrokeThickness="2" Width="50" Height="25" Grid.Column="1" Grid.Row="0"/>
+                                        <Rectangle Stroke="Black" StrokeThickness="2" Width="50" Height="25" Grid.Column="0" Grid.Row="1"/>
+                                        <Rectangle Stroke="Black" StrokeThickness="2" Width="50" Height="25" Grid.Column="1" Grid.Row="1"/>
+                                        <Rectangle Stroke="Black" StrokeThickness="2" Width="50" Height="25" Grid.Column="0" Grid.Row="2"/>
+                                        <Rectangle Stroke="Black" StrokeThickness="2" Width="50" Height="25" Grid.Column="1" Grid.Row="2"/>
+                                        <Rectangle Stroke="Black" StrokeThickness="2" Width="50" Height="25" Grid.Column="0" Grid.Row="3"/>
+                                        <Rectangle Stroke="Black" StrokeThickness="2" Width="50" Height="25" Grid.Column="1" Grid.Row="3"/>
+                                    </Grid>
+                                </RadioButton>
+                                
+                                <RadioButton x:Name="generate1x3RadioButton"  Margin="20,0,0,0"   GroupName="GenerateSize"  Click="generateSize1x3RadioButton_Click">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Rectangle Stroke="Black" StrokeThickness="2" Width="100" Height="33" Grid.Column="0" Grid.Row="0"/>
+                                        <Rectangle Stroke="Black" StrokeThickness="2" Width="100" Height="33" Grid.Column="0" Grid.Row="1"/>
+                                        <Rectangle Stroke="Black" StrokeThickness="2" Width="100" Height="33" Grid.Column="0" Grid.Row="2"/>
+                                    </Grid>
+                                </RadioButton>
+                            </StackPanel>
+
+                            
+                            <Button x:Name="generateButton" Content="Generate" Click="generateButton_Click"/>
+                        </StackPanel>
+                    </Grid>
+                </TabItem>
             </TabControl>
         </StackPanel>
 
@@ -370,10 +433,6 @@
 
                 <couponControl:Coupon x:Name="previewCoupon" Grid.Column="1"/>
             </Grid>
-        </StackPanel>
-
-        <StackPanel Orientation="Horizontal" Grid.Row="2" >
-            <Button Content="Generate" HorizontalAlignment="Right"/>
         </StackPanel>
     </Grid>
 </Page>

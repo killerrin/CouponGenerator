@@ -29,6 +29,8 @@ namespace Coupon_Generator
         public VerticalAlignment BodyVerticalAlignment;
 
         public bool ExpiryDateEnabled;
+        public ExpiryDateCase ExpiryDateCase;
+        public string ExpiryText;
         public DateTime ExpiryDate;
         public Thickness ExpiryDateMargin;
         public HorizontalAlignment ExpiryDateHorizontalAlignment;
@@ -40,7 +42,8 @@ namespace Coupon_Generator
         public VerticalAlignment CouponIDVerticalAlignment;
         
         public int CouponIDStartIndex;
-        public int NumberOfCouponsToPrint;
+        public int NumberOfCouponsToGenerate;
+        public SaveAsSettings SaveAsSettings;
 
         public CouponSettings()
         {
@@ -63,6 +66,8 @@ namespace Coupon_Generator
             BodyVerticalAlignment = VerticalAlignment.Center;
 
             ExpiryDateEnabled = true;
+            ExpiryDateCase = Coupon_Generator.ExpiryDateCase.Default;
+            ExpiryText = "Expires";
             ExpiryDate = new DateTime(DateTime.Now.Year, 12, 31);
             ExpiryDateMargin = new Thickness(0, 0, 0, 10);
             ExpiryDateHorizontalAlignment = HorizontalAlignment.Center;
@@ -74,7 +79,8 @@ namespace Coupon_Generator
             CouponIDHorizontalAlignment = HorizontalAlignment.Right;
             CouponIDVerticalAlignment = VerticalAlignment.Bottom;
 
-            NumberOfCouponsToPrint = 1;
+            NumberOfCouponsToGenerate = 1;
+            SaveAsSettings = Coupon_Generator.SaveAsSettings.PDF;
         }
     }
 }
