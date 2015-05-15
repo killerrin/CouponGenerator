@@ -67,6 +67,7 @@ namespace Coupon_Generator
             else bodyDisabledRadioButton.IsChecked = true;
 
             // Expiry Defaults
+            expiryTextBox.Text = App.CurrentCouponSettings.ExpiryText;
             expiryDatePicker.SelectedDate = App.CurrentCouponSettings.ExpiryDate;
             expiryDateMarginTextBlockLeft.Text = App.CurrentCouponSettings.ExpiryDateMargin.Left.ToString();
             expiryDateMarginTextBlockRight.Text = App.CurrentCouponSettings.ExpiryDateMargin.Right.ToString();

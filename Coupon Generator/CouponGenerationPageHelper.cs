@@ -100,6 +100,7 @@ namespace Coupon_Generator
                         }
 
                         document.Save(dlg.FileName);
+                        Process.Start(dlg.FileName);
                         break;
                     #endregion
 
