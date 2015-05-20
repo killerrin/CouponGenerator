@@ -4,7 +4,22 @@
         Title="Coupon Generator" Height="700" Width="900" ResizeMode="NoResize"
         >
     <Grid>
-        <Frame x:Name="mainFrame" NavigationUIVisibility="Hidden" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0"
+        <DockPanel>
+            <Menu x:Name="mainWindowMenu" DockPanel.Dock="Top">
+                <MenuItem x:Name="fileMenuItem" Header="File">
+                    <MenuItem x:Name="mainWindow_File_Open"     Header="Open"       IsCheckable="False"  Click="mainWindow_File_Open_Click"/>
+                    <MenuItem x:Name="mainWindow_File_Save"     Header="Save"       IsCheckable="False"  Click="mainWindow_File_Save_Click"/>
+                    <MenuItem x:Name="mainWindow_File_SaveAs"   Header="Save As"    IsCheckable="False"  Click="mainWindow_File_SaveAs_Click"/>
+                    <MenuItem x:Name="mainWindow_File_Close"    Header="Close"      IsCheckable="False"  Click="mainWindow_File_Close_Click"/>
+                </MenuItem>
+                <MenuItem x:Name="otherMenuItem" Header="Other">
+                    <MenuItem x:Name="mainWindow_Other_About"       Header="About"   IsCheckable="False"  Click="mainWindow_Other_About_Click"/>
+                    <!--<MenuItem x:Name="mainWindow_Other_Help"    Header="Help"    IsCheckable="False"  Click="mainWindow_Other_Help_Click"/>-->
+                </MenuItem>
+            </Menu>
+
+            <Frame x:Name="mainFrame" NavigationUIVisibility="Hidden" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0"
                Loaded="MainFrame_Loaded"/>
+        </DockPanel>
     </Grid>
 </Window>

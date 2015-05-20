@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +12,8 @@ namespace Coupon_Generator
 {
     public class CouponSettings
     {
+        public Uri SaveLocation;
+
         public Color BackgroundColor;
         public Uri ImageLocation;
 
@@ -47,6 +51,8 @@ namespace Coupon_Generator
 
         public CouponSettings()
         {
+            SaveLocation = null;
+
             BackgroundColor = Color.FromArgb(255, 197, 228, 255);
             ImageLocation = null;
 
@@ -81,6 +87,17 @@ namespace Coupon_Generator
 
             NumberOfCouponsToGenerate = 8;
             SaveAsSettings = Coupon_Generator.SaveAsSettings.Any;
+        }
+
+        public string ToJson()
+        {
+            return JsonConvert.SerializeObject(this);
+        }
+        public static CouponSettings JsonToObject(string json)
+        {
+            JObject jObject = JObject.Parse(json);
+            CouponSettings settings = JsonConvert.DeserializeObject<CouponSettings>(jObject.ToString());
+            return settings;
         }
     }
 }
