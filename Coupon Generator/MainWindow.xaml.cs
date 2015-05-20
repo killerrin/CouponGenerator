@@ -37,6 +37,12 @@ namespace Coupon_Generator
         }
 
         #region MainWindow Menu
+        private void mainWindow_File_New_Click(object sender, RoutedEventArgs e)
+        {
+            App.CurrentCouponSettings = new CouponSettings();
+            mainFrame.NavigationService.Refresh();
+        }
+
         private void mainWindow_File_Open_Click(object sender, RoutedEventArgs e)
         {
             // Load the File

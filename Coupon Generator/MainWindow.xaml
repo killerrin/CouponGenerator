@@ -6,6 +6,7 @@
         <DockPanel>
             <Menu x:Name="mainWindowMenu" DockPanel.Dock="Top">
                 <MenuItem x:Name="fileMenuItem" Header="File">
+                    <MenuItem x:Name="mainWindow_File_New"      Header="New"        IsCheckable="False"  Click="mainWindow_File_New_Click"/>
                     <MenuItem x:Name="mainWindow_File_Open"     Header="Open"       IsCheckable="False"  Click="mainWindow_File_Open_Click"/>
                     <MenuItem x:Name="mainWindow_File_Save"     Header="Save"       IsCheckable="False"  Click="mainWindow_File_Save_Click"/>
                     <MenuItem x:Name="mainWindow_File_SaveAs"   Header="Save As"    IsCheckable="False"  Click="mainWindow_File_SaveAs_Click"/>
