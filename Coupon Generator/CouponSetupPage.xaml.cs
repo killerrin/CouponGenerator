@@ -127,8 +127,16 @@ namespace Coupon_Generator
             Nullable<bool> result = dlg.ShowDialog();
             if (result == true)
             {
-                App.CurrentCouponSettings.ImageLocation = new Uri(dlg.FileName, UriKind.Absolute);
-                couponImage.Source = new BitmapImage(App.CurrentCouponSettings.ImageLocation);
+                try
+                {
+                    App.CurrentCouponSettings.ImageLocation = new Uri(dlg.FileName, UriKind.Absolute);
+                    couponImage.Source = new BitmapImage(App.CurrentCouponSettings.ImageLocation);
+                }
+                catch (Exception)
+                {
+                    App.CurrentCouponSettings.ImageLocation = null;
+                }
+                    
                 UpdatePreviewImage();
             }
         }

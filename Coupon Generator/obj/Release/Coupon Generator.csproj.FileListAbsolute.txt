@@ -1,0 +1,48 @@
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Release\Coupon Generator.exe.config
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Release\Coupon Generator.exe
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Release\Coupon Generator.pdb
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Release\Newtonsoft.Json.dll
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Release\PdfSharp.Charting.dll
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Release\PdfSharp.dll
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Release\Xceed.Wpf.AvalonDock.dll
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Release\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Release\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Release\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Release\Xceed.Wpf.DataGrid.dll
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Release\Xceed.Wpf.Toolkit.dll
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Release\Newtonsoft.Json.xml
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Release\PdfSharp.xml
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Release\PdfSharp.Charting.xml
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Release\de\PdfSharp.resources.dll
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Release\de\PdfSharp.Charting.resources.dll
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Release\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Release\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Release\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Release\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Release\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Release\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Release\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Release\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Release\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Release\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Release\AboutWindow.baml
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Release\Coupon.baml
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Release\MainWindow.baml
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Release\AboutWindow.g.cs
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Release\Coupon.g.cs
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Release\CouponGenerationPage1x3.g.cs
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Release\CouponGenerationPage2x4.g.cs
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Release\CouponSetupPage.g.cs
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Release\MainWindow.g.cs
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Release\App.g.cs
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Release\Coupon Generator_MarkupCompile.cache
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Release\Coupon Generator_MarkupCompile.lref
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Release\CouponGenerationPage1x3.baml
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Release\CouponGenerationPage2x4.baml
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Release\CouponSetupPage.baml
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Release\Coupon Generator.g.resources
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Release\Coupon_Generator.Properties.Resources.resources
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Release\Coupon Generator.csproj.GenerateResource.Cache
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Release\Coupon Generator.exe
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Release\Coupon Generator.pdb

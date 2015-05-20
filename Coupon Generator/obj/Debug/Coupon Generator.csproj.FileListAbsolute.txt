@@ -47,3 +47,4 @@ C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Debug\Abou
 C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Debug\AboutWindow.g.cs
 C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Debug\Coupon Generator.csprojResolveAssemblyReference.cache
