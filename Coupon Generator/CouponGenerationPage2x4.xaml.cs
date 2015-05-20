@@ -76,6 +76,12 @@ namespace Coupon_Generator
             {
                 CouponGenerationPageHelper.SaveToFile(ref m_imageMemoryStream);
 
+                // Save the Coupon Settings
+                if (App.CurrentCouponSettings.SaveLocation != null)
+                {
+                    //MainWindow.Current.mainWindow_File_Save_Click(null, null);
+                }
+
                 // Navigate Out
                 MainWindow.Current.mainFrame.GoBack();
             }

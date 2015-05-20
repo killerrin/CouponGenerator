@@ -55,7 +55,7 @@ namespace Coupon_Generator
             mainFrame.NavigationService.Refresh();
         }
 
-        private void mainWindow_File_Save_Click(object sender, RoutedEventArgs e)
+        public void mainWindow_File_Save_Click(object sender, RoutedEventArgs e)
         {
             if (App.CurrentCouponSettings.SaveLocation == null)
                 mainWindow_File_SaveAs_Click(sender, e);
