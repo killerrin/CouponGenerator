@@ -46,3 +46,4 @@ C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Release\Co
 C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Release\Coupon Generator.csproj.GenerateResource.Cache
 C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Release\Coupon Generator.exe
 C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Release\Coupon Generator.pdb
+C:\Users\Andrew\Documents\GitHub\CouponGenerator\Coupon Generator\obj\Release\Coupon Generator.csprojResolveAssemblyReference.cache

@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -108,5 +109,42 @@ namespace Coupon_Generator
 
         }
         #endregion
+
+        private void Window_PreviewDragEnter(object sender, DragEventArgs e)
+        {
+            bool isCorrect = true;
+
+            if (e.Data.GetDataPresent(DataFormats.FileDrop, true) == true)
+            {
+                string[] filenames = (string[])e.Data.GetData(DataFormats.FileDrop, true);
+                foreach (string filename in filenames)
+                {
+                    if (File.Exists(filename) == false)
+                    {
+                        isCorrect = false;
+                        break;
+                    }
+                    FileInfo info = new FileInfo(filename);
+                    if (info.Extension != ".coupon")
+                    {
+                        isCorrect = false;
+                        break;
+                    }
+                }
+            }
+            if (isCorrect == true)
+                e.Effects = DragDropEffects.All;
+            else
+                e.Effects = DragDropEffects.None;
+            e.Handled = true;
+        }
+
+        private void Window_Drop(object sender, DragEventArgs e)
+        {
+            string[] filenames = (string[])e.Data.GetData(DataFormats.FileDrop, true);
+            foreach (string filename in filenames)
+                Debug.WriteLine(File.ReadAllText(filename));
+            e.Handled = true; 
+        }
     }
 }
