@@ -16,5 +16,5 @@ This product is under a GPLv3 License (http://www.gnu.org/licenses/gpl-3.0.html)
 ![Generate Options](/Promotional/Screenshots/Generate.png)
 
 ## Output
-![1x3 Output](/Promotional/Output/Coupon Generation_10_3.png)
-![2x4 Output](/Promotional/Output/Coupon Generation_20_8.png)
+![1x3 Output](https://github.com/killerrin/CouponGenerator/blob/master/Promotional/Output/Coupon%20Generation_10_3.png)
+![2x4 Output](https://github.com/killerrin/CouponGenerator/blob/master/Promotional/Output/Coupon%20Generation_20_8.png)
