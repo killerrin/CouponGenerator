@@ -1,7 +1,7 @@
 # Coupon Generator
 
 ## Description
-Coupon Generator is made by Andrew Godfroy of Killerrin Studios (http://www.killerrin.com)
+A simple coupon generator to create grids of ID'd coupons from a single design template
 
 ## License
 This product is under a GPLv3 License (http://www.gnu.org/licenses/gpl-3.0.html)
@@ -18,3 +18,6 @@ This product is under a GPLv3 License (http://www.gnu.org/licenses/gpl-3.0.html)
 ## Output
 ![1x3 Output](https://github.com/killerrin/CouponGenerator/blob/master/Promotional/Output/Coupon%20Generation_10_3.png)
 ![2x4 Output](https://github.com/killerrin/CouponGenerator/blob/master/Promotional/Output/Coupon%20Generation_20_8.png)
+
+## Attribution
+Coupon Generator is made by Andrew Godfroy of Killerrin Studios (http://www.killerrin.com)
